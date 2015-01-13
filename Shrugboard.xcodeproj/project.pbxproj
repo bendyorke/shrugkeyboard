@@ -64,6 +64,7 @@
 		D98A0B2119FAD670004DFBFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D98A0B2219FAD670004DFBFD /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		D98A0B2B19FAD691004DFBFD /* RowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
+		D99A918D1A64EA5B00BFDBD3 /* Scratch.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Scratch.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				D98A0B2219FAD670004DFBFD /* KeyboardViewController.swift */,
+				D99A918D1A64EA5B00BFDBD3 /* Scratch.playground */,
 				D98A0B2B19FAD691004DFBFD /* RowView.swift */,
 				D98A0B2019FAD670004DFBFD /* Supporting Files */,
 			);
@@ -495,6 +497,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Shrug/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -505,6 +508,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = Shrug/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -530,6 +534,7 @@
 				D98A0B1619FAD656004DFBFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D98A0B1719FAD656004DFBFD /* Build configuration list for PBXNativeTarget "ShrugboardTests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +543,7 @@
 				D98A0B1919FAD656004DFBFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D98A0B2719FAD670004DFBFD /* Build configuration list for PBXNativeTarget "Shrug" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +552,7 @@
 				D98A0B2919FAD670004DFBFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

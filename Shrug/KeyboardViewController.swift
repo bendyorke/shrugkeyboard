@@ -20,11 +20,6 @@ class KeyboardViewController: UIInputViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        buildKeyboard()
-        // Perform custom UI setup here
-    }
-    
-    func buildKeyboard() {
         addRows()
         addButtons()
         placeRows()
@@ -41,66 +36,51 @@ class KeyboardViewController: UIInputViewController {
         button("(•_•)", row: 0)
         button("( •_•)>⌐■-■", row: 0)
         button("(⌐■_■)", row: 0)
-        button("ʘ‿ʘ", row: 1)
         button("\\(´Д｀)/", row: 0)
-        button("ˁ˚ᴥ˚ˀ", row: 1)
-        button("ᕙ(⇀Д↼‶)ᕗ", row: 1)
+        button(" ˁ˚ᴥ˚ˀ ", row: 1)
+        button(" ʕ•ᴥ•ʔ ", row: 1)
+        button(" ᕙ(⇀Д↼‶)ᕗ ", row: 1)
         button("(╬ ಠ益ಠ)", row: 1)
         button("( ͡° ͜ʖ ͡°)", row: 1)
-        button("﴾͡๏̯͡๏﴿", row: 1)
+        button(" (╯°□°）╯︵ ┻━┻ ", row: 2)
         button("(ಠ_ಠ)", row: 2)
-        button("ಠoಠ", row: 2)
-        button("ಠ~ಠ", row: 2)
-        button("ಠ‿ಠ", row: 2)
-        button("ಠ⌣ಠ", row: 2)
-        button("ಠ╭╮ಠ", row: 2)
-        button("ರ_ರ", row: 2)
-        button("🌐", row: 3)
+        button(" ʘ‿ʘ ", row: 2)
+        button(" ಠ╭╮ಠ ", row: 2)
+        button("  🌐  ", row: 3)
         button("Space", row: 3)
-        button("Return", row: 3)
-        button("⌫", row: 3)
-    }
-    
-    func button(title: String, row index: Int) {
-        var button = UIButton.buttonWithType(.System) as UIButton
-        let length = countElements(title) * 100
-        button.setTitle(title, forState: .Normal)
-        button.setContentCompressionResistancePriority(UILayoutPriority(length), forAxis: UILayoutConstraintAxis.Horizontal)
-        button.sizeToFit()
-        button.setTranslatesAutoresizingMaskIntoConstraints(false)
-        button.backgroundColor = UIColor(white: 1.0, alpha: 1.0)
-        button.setTitleColor(UIColor.darkGrayColor(), forState: .Normal)
-        button.addTarget(self, action: "didTapButton:", forControlEvents: .TouchUpInside)
-        self.rows[index] += button
+        button(" Return ", row: 3)
+        button("  ⌫  ", row: 3)
     }
     
     func placeRows() {
         for (index, row) in enumerate(self.rows) {
             self.view.addSubview(row)
-            constrainButtons(row.buttons, mainView: row)
+            constrainButtons(row.buttons, mainView: row, rowIndex: index)
             row.setTranslatesAutoresizingMaskIntoConstraints(false)
         }
         constrainRows(self.view, rowViews: self.rows)
     }
     
-    func constrainButtons(buttons: [UIButton], mainView: RowView){
+    func constrainButtons(buttons: [UIButton], mainView: RowView, rowIndex: Int){
         
         for (index, button) in enumerate(buttons) {
             
-            var topConstraint = NSLayoutConstraint(item: button, attribute: .Top, relatedBy: .Equal, toItem: mainView, attribute: .Top, multiplier: 1.0, constant: 1)
+            var length = countElements(button.titleLabel!.text!)
             
-            var bottomConstraint = NSLayoutConstraint(item: button, attribute: .Bottom, relatedBy: .Equal, toItem: mainView, attribute: .Bottom, multiplier: 1.0, constant: -1)
+            var topConstraint = NSLayoutConstraint(item: button, attribute: .Top, relatedBy: .Equal, toItem: mainView, attribute: .Top, multiplier: 1.0, constant: 0)
+            
+            var bottomConstraint = NSLayoutConstraint(item: button, attribute: .Bottom, relatedBy: .Equal, toItem: mainView, attribute: .Bottom, multiplier: 1.0, constant: 0)
             
             var rightConstraint : NSLayoutConstraint!
             
             if index == buttons.count - 1 {
                 
-                rightConstraint = NSLayoutConstraint(item: button, attribute: .Right, relatedBy: .Equal, toItem: mainView, attribute: .Right, multiplier: 1.0, constant: -1)
+                rightConstraint = NSLayoutConstraint(item: button, attribute: .Right, relatedBy: .Equal, toItem: mainView, attribute: .Right, multiplier: 1.0, constant: 0)
                 
             }else{
                 
                 let nextButton = buttons[index+1]
-                rightConstraint = NSLayoutConstraint(item: button, attribute: .Right, relatedBy: .Equal, toItem: nextButton, attribute: .Left, multiplier: 1.0, constant: -1)
+                rightConstraint = NSLayoutConstraint(item: button, attribute: .Right, relatedBy: .Equal, toItem: nextButton, attribute: .Left, multiplier: 1.0, constant: 0)
             }
             
             
@@ -108,17 +88,23 @@ class KeyboardViewController: UIInputViewController {
             
             if index == 0 {
                 
-                leftConstraint = NSLayoutConstraint(item: button, attribute: .Left, relatedBy: .Equal, toItem: mainView, attribute: .Left, multiplier: 1.0, constant: 1)
+                leftConstraint = NSLayoutConstraint(item: button, attribute: .Left, relatedBy: .Equal, toItem: mainView, attribute: .Left, multiplier: 1.0, constant: 0)
                 
             }else{
                 
                 let prevtButton = buttons[index-1]
-                leftConstraint = NSLayoutConstraint(item: button, attribute: .Left, relatedBy: .Equal, toItem: prevtButton, attribute: .Right, multiplier: 1.0, constant: 1)
+                leftConstraint = NSLayoutConstraint(item: button, attribute: .Left, relatedBy: .Equal, toItem: prevtButton, attribute: .Right, multiplier: 1.0, constant: 0)
                 
                 let firstButton = buttons[0]
-                var widthConstraint = NSLayoutConstraint(item: firstButton, attribute: .Width, relatedBy: .Equal, toItem: button, attribute: .Width, multiplier: 1.0, constant: 0)
-                
-                mainView.addConstraint(widthConstraint)
+            }
+            
+            if ((rowIndex == 0 && index != 1) ||
+                (rowIndex == 1 && index != 3) ||
+                (rowIndex == 2 && index != 0) ||
+                (rowIndex == 3 && index != 1)) {
+                    var widthConstraint = NSLayoutConstraint(item: button, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: CGFloat(length * 10))
+                    
+                    mainView.addConstraint(widthConstraint)
             }
             
             mainView.addConstraints([topConstraint, bottomConstraint, rightConstraint, leftConstraint])
@@ -128,16 +114,16 @@ class KeyboardViewController: UIInputViewController {
     func constrainRows(inputView: UIView, rowViews: [RowView]){
         
         for (index, rowView) in enumerate(rowViews) {
-            var rightSideConstraint = NSLayoutConstraint(item: rowView, attribute: .Right, relatedBy: .Equal, toItem: inputView, attribute: .Right, multiplier: 1.0, constant: -1)
+            var rightSideConstraint = NSLayoutConstraint(item: rowView, attribute: .Right, relatedBy: .Equal, toItem: inputView, attribute: .Right, multiplier: 1.0, constant: 0)
             
-            var leftConstraint = NSLayoutConstraint(item: rowView, attribute: .Left, relatedBy: .Equal, toItem: inputView, attribute: .Left, multiplier: 1.0, constant: 1)
+            var leftConstraint = NSLayoutConstraint(item: rowView, attribute: .Left, relatedBy: .Equal, toItem: inputView, attribute: .Left, multiplier: 1.0, constant: 0)
             
             inputView.addConstraints([leftConstraint, rightSideConstraint])
             
             var topConstraint: NSLayoutConstraint
             
             if index == 0 {
-                topConstraint = NSLayoutConstraint(item: rowView, attribute: .Top, relatedBy: .Equal, toItem: inputView, attribute: .Top, multiplier: 1.0, constant: 0)
+                topConstraint = NSLayoutConstraint(item: rowView, attribute: .Top, relatedBy: .Equal, toItem: inputView, attribute: .Top, multiplier: 1.0, constant: 1)
                 
             }else{
                 
@@ -184,6 +170,16 @@ class KeyboardViewController: UIInputViewController {
         default :
             proxy.insertText(title!)
         }
+    }
+    
+    func button(title: String, row index: Int) {
+        var button = UIButton.buttonWithType(.System) as UIButton
+        button.setTitle(title, forState: .Normal)
+        button.setTranslatesAutoresizingMaskIntoConstraints(false)
+        button.backgroundColor = UIColor(white: 1.0, alpha: 1.0)
+        button.setTitleColor(UIColor.darkGrayColor(), forState: .Normal)
+        button.addTarget(self, action: "didTapButton:", forControlEvents: .TouchUpInside)
+        self.rows[index] += button
     }
     
     override func didReceiveMemoryWarning() {
