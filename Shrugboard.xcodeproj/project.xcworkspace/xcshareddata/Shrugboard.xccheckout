@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6683C97C-B065-4E72-A40D-6CDC63A4A492</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Shrugboard</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>58764FDD922E8114A2F0E820A4D1EDA0E196DFDD</key>
+		<string>github.com:bendyorke/shrugkeyboard.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Shrugboard.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>58764FDD922E8114A2F0E820A4D1EDA0E196DFDD</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:bendyorke/shrugkeyboard.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>58764FDD922E8114A2F0E820A4D1EDA0E196DFDD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>58764FDD922E8114A2F0E820A4D1EDA0E196DFDD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Shrugboard</string>
+		</dict>
+	</array>
+</dict>
+</plist>
