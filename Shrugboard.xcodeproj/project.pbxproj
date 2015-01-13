@@ -13,6 +13,9 @@
 		D98A0B0219FAD656004DFBFD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D98A0B0119FAD656004DFBFD /* Images.xcassets */; };
 		D98A0B0519FAD656004DFBFD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D98A0B0319FAD656004DFBFD /* LaunchScreen.xib */; };
 		D98A0B1119FAD656004DFBFD /* ShrugboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98A0B1019FAD656004DFBFD /* ShrugboardTests.swift */; };
+		D98A0B2319FAD670004DFBFD /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98A0B2219FAD670004DFBFD /* KeyboardViewController.swift */; };
+		D98A0B2619FAD670004DFBFD /* Shrug.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D98A0B1E19FAD670004DFBFD /* Shrug.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D98A0B2C19FAD691004DFBFD /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98A0B2B19FAD691004DFBFD /* RowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,7 +26,28 @@
 			remoteGlobalIDString = D98A0AF419FAD656004DFBFD;
 			remoteInfo = Shrugboard;
 		};
+		D98A0B2419FAD670004DFBFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D98A0AED19FAD656004DFBFD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D98A0B1D19FAD670004DFBFD;
+			remoteInfo = Shrug;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D98A0B2A19FAD670004DFBFD /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D98A0B2619FAD670004DFBFD /* Shrug.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D98A0AF519FAD656004DFBFD /* Shrugboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shrugboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +60,10 @@
 		D98A0B0A19FAD656004DFBFD /* ShrugboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShrugboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D98A0B0F19FAD656004DFBFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D98A0B1019FAD656004DFBFD /* ShrugboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShrugboardTests.swift; sourceTree = "<group>"; };
+		D98A0B1E19FAD670004DFBFD /* Shrug.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Shrug.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D98A0B2119FAD670004DFBFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D98A0B2219FAD670004DFBFD /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		D98A0B2B19FAD691004DFBFD /* RowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +81,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D98A0B1B19FAD670004DFBFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,6 +96,7 @@
 			children = (
 				D98A0AF719FAD656004DFBFD /* Shrugboard */,
 				D98A0B0D19FAD656004DFBFD /* ShrugboardTests */,
+				D98A0B1F19FAD670004DFBFD /* Shrug */,
 				D98A0AF619FAD656004DFBFD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +106,7 @@
 			children = (
 				D98A0AF519FAD656004DFBFD /* Shrugboard.app */,
 				D98A0B0A19FAD656004DFBFD /* ShrugboardTests.xctest */,
+				D98A0B1E19FAD670004DFBFD /* Shrug.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +149,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D98A0B1F19FAD670004DFBFD /* Shrug */ = {
+			isa = PBXGroup;
+			children = (
+				D98A0B2219FAD670004DFBFD /* KeyboardViewController.swift */,
+				D98A0B2B19FAD691004DFBFD /* RowView.swift */,
+				D98A0B2019FAD670004DFBFD /* Supporting Files */,
+			);
+			path = Shrug;
+			sourceTree = "<group>";
+		};
+		D98A0B2019FAD670004DFBFD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D98A0B2119FAD670004DFBFD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,10 +177,12 @@
 				D98A0AF119FAD656004DFBFD /* Sources */,
 				D98A0AF219FAD656004DFBFD /* Frameworks */,
 				D98A0AF319FAD656004DFBFD /* Resources */,
+				D98A0B2A19FAD670004DFBFD /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D98A0B2519FAD670004DFBFD /* PBXTargetDependency */,
 			);
 			name = Shrugboard;
 			productName = Shrugboard;
@@ -150,6 +207,23 @@
 			productReference = D98A0B0A19FAD656004DFBFD /* ShrugboardTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		D98A0B1D19FAD670004DFBFD /* Shrug */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D98A0B2719FAD670004DFBFD /* Build configuration list for PBXNativeTarget "Shrug" */;
+			buildPhases = (
+				D98A0B1A19FAD670004DFBFD /* Sources */,
+				D98A0B1B19FAD670004DFBFD /* Frameworks */,
+				D98A0B1C19FAD670004DFBFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Shrug;
+			productName = Shrug;
+			productReference = D98A0B1E19FAD670004DFBFD /* Shrug.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -165,6 +239,9 @@
 					D98A0B0919FAD656004DFBFD = {
 						CreatedOnToolsVersion = 6.1;
 						TestTargetID = D98A0AF419FAD656004DFBFD;
+					};
+					D98A0B1D19FAD670004DFBFD = {
+						CreatedOnToolsVersion = 6.1;
 					};
 				};
 			};
@@ -183,6 +260,7 @@
 			targets = (
 				D98A0AF419FAD656004DFBFD /* Shrugboard */,
 				D98A0B0919FAD656004DFBFD /* ShrugboardTests */,
+				D98A0B1D19FAD670004DFBFD /* Shrug */,
 			);
 		};
 /* End PBXProject section */
@@ -199,6 +277,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D98A0B0819FAD656004DFBFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D98A0B1C19FAD670004DFBFD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -225,6 +310,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D98A0B1A19FAD670004DFBFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D98A0B2319FAD670004DFBFD /* KeyboardViewController.swift in Sources */,
+				D98A0B2C19FAD691004DFBFD /* RowView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -232,6 +326,11 @@
 			isa = PBXTargetDependency;
 			target = D98A0AF419FAD656004DFBFD /* Shrugboard */;
 			targetProxy = D98A0B0B19FAD656004DFBFD /* PBXContainerItemProxy */;
+		};
+		D98A0B2519FAD670004DFBFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D98A0B1D19FAD670004DFBFD /* Shrug */;
+			targetProxy = D98A0B2419FAD670004DFBFD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -336,6 +435,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Shrugboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -346,6 +446,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Shrugboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -386,6 +487,30 @@
 			};
 			name = Release;
 		};
+		D98A0B2819FAD670004DFBFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Shrug/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D98A0B2919FAD670004DFBFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Shrug/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -411,6 +536,14 @@
 			buildConfigurations = (
 				D98A0B1819FAD656004DFBFD /* Debug */,
 				D98A0B1919FAD656004DFBFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D98A0B2719FAD670004DFBFD /* Build configuration list for PBXNativeTarget "Shrug" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D98A0B2819FAD670004DFBFD /* Debug */,
+				D98A0B2919FAD670004DFBFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

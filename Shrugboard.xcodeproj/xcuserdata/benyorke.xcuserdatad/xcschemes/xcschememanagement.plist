@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Shrug.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Shrugboard.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>D98A0B0919FAD656004DFBFD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D98A0B1D19FAD670004DFBFD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
