@@ -155,10 +155,10 @@ class KeyboardViewController: UIInputViewController {
     
     func didTapButton(sender: AnyObject?) {
         let button = sender as UIButton
-        let title = button.titleForState(.Normal)
+        let title = button.titleForState(.Normal)!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         var proxy = textDocumentProxy as UITextDocumentProxy
         
-        switch title! {
+        switch title {
         case "⌫" :
             proxy.deleteBackward()
         case "Return" :
@@ -168,7 +168,7 @@ class KeyboardViewController: UIInputViewController {
         case "🌐" :
             self.advanceToNextInputMode()
         default :
-            proxy.insertText(title!)
+            proxy.insertText(title)
         }
     }
     
