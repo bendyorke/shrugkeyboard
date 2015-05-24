@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14C81f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14C99d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -17,44 +17,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To add keyboard, navigate Settings:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSm-Fx-dMe">
+                                <rect key="frame" x="16" y="83" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="gdm-qX-emU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General &gt; Keyboard &gt; Add New..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZ7-bC-b8f">
+                                <rect key="frame" x="16" y="112" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="0KZ-Cj-O4H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select &quot;Shrugboard&quot; and try it out below!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8P-Rk-S0O">
+                                <rect key="frame" x="16" y="141" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d93-ah-Z0E">
-                                <rect key="frame" x="16" y="209" width="568" height="30"/>
+                                <rect key="frame" x="16" y="170" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="To add keyboard, navigate Settings:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSm-Fx-dMe">
-                                <rect key="frame" x="16" y="83" width="568" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="General &gt; Keyboard &gt; Add New..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZ7-bC-b8f">
-                                <rect key="frame" x="16" y="122" width="568" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Select &quot;Shrugboard&quot; and try it out below!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8P-Rk-S0O">
-                                <rect key="frame" x="16" y="161" width="568" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="n8P-Rk-S0O" firstAttribute="top" secondItem="BZ7-bC-b8f" secondAttribute="bottom" constant="18" id="0RT-yG-vdS"/>
-                            <constraint firstItem="d93-ah-Z0E" firstAttribute="top" secondItem="n8P-Rk-S0O" secondAttribute="bottom" constant="27" id="Elj-qG-k9h"/>
+                            <constraint firstItem="n8P-Rk-S0O" firstAttribute="top" secondItem="BZ7-bC-b8f" secondAttribute="bottom" constant="8" id="1Ri-Gf-aXg"/>
+                            <constraint firstItem="d93-ah-Z0E" firstAttribute="top" secondItem="n8P-Rk-S0O" secondAttribute="bottom" constant="8" id="GXZ-Ur-993"/>
                             <constraint firstItem="d93-ah-Z0E" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="Go2-dw-lwq"/>
                             <constraint firstAttribute="centerX" secondItem="n8P-Rk-S0O" secondAttribute="centerX" id="OkI-4n-5tW"/>
+                            <constraint firstItem="BZ7-bC-b8f" firstAttribute="top" secondItem="pSm-Fx-dMe" secondAttribute="bottom" constant="8" id="P0a-91-brV"/>
+                            <constraint firstItem="pSm-Fx-dMe" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="63" id="ULa-Q8-iDt"/>
                             <constraint firstAttribute="centerX" secondItem="pSm-Fx-dMe" secondAttribute="centerX" id="X2Y-bX-7lb"/>
                             <constraint firstAttribute="centerX" secondItem="BZ7-bC-b8f" secondAttribute="centerX" id="X2i-Hv-dPA"/>
                             <constraint firstItem="d93-ah-Z0E" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="189" id="lpT-Qm-vV8"/>
-                            <constraint firstItem="pSm-Fx-dMe" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="63" id="q4v-8E-rwE"/>
+                            <constraint firstItem="n8P-Rk-S0O" firstAttribute="leading" secondItem="BZ7-bC-b8f" secondAttribute="leading" id="mmI-3s-6Nu"/>
+                            <constraint firstItem="BZ7-bC-b8f" firstAttribute="leading" secondItem="pSm-Fx-dMe" secondAttribute="leading" id="pKd-D4-BPi"/>
                             <constraint firstItem="d93-ah-Z0E" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="qsG-ho-Fms"/>
-                            <constraint firstItem="BZ7-bC-b8f" firstAttribute="top" secondItem="pSm-Fx-dMe" secondAttribute="bottom" constant="18" id="upd-Pd-PAO"/>
                             <constraint firstItem="d93-ah-Z0E" firstAttribute="width" secondItem="pSm-Fx-dMe" secondAttribute="width" id="v8f-m2-dud"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="lpT-Qm-vV8"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="textField" destination="d93-ah-Z0E" id="knR-nx-jIC"/>

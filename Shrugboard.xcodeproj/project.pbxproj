@@ -16,6 +16,7 @@
 		D98A0B2319FAD670004DFBFD /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98A0B2219FAD670004DFBFD /* KeyboardViewController.swift */; };
 		D98A0B2619FAD670004DFBFD /* Shrug.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D98A0B1E19FAD670004DFBFD /* Shrug.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D98A0B2C19FAD691004DFBFD /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98A0B2B19FAD691004DFBFD /* RowView.swift */; };
+		D9EF6AA01A6B0DCE007AC1F7 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EF6A9F1A6B0DCE007AC1F7 /* Key.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		D98A0B2219FAD670004DFBFD /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		D98A0B2B19FAD691004DFBFD /* RowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 		D99A918D1A64EA5B00BFDBD3 /* Scratch.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Scratch.playground; sourceTree = "<group>"; };
+		D9EF6A9F1A6B0DCE007AC1F7 /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,8 +156,9 @@
 			isa = PBXGroup;
 			children = (
 				D98A0B2219FAD670004DFBFD /* KeyboardViewController.swift */,
-				D99A918D1A64EA5B00BFDBD3 /* Scratch.playground */,
 				D98A0B2B19FAD691004DFBFD /* RowView.swift */,
+				D9EF6A9F1A6B0DCE007AC1F7 /* Key.swift */,
+				D99A918D1A64EA5B00BFDBD3 /* Scratch.playground */,
 				D98A0B2019FAD670004DFBFD /* Supporting Files */,
 			);
 			path = Shrug;
@@ -318,6 +321,7 @@
 			files = (
 				D98A0B2319FAD670004DFBFD /* KeyboardViewController.swift in Sources */,
 				D98A0B2C19FAD691004DFBFD /* RowView.swift in Sources */,
+				D9EF6AA01A6B0DCE007AC1F7 /* Key.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +443,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Shrugboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -450,6 +455,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Shrugboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

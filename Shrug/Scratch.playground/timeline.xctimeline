@@ -3,7 +3,10 @@
    version = "3.0">
    <TimelineItems>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "#CharacterRangeLen=8&amp;CharacterRangeLoc=927&amp;EndingColumnNumber=9&amp;EndingLineNumber=37&amp;StartingColumnNumber=1&amp;StartingLineNumber=37&amp;Timestamp=442822272.000903">
+         documentLocation = "#CharacterRangeLen=8&amp;CharacterRangeLoc=1225&amp;EndingColumnNumber=9&amp;EndingLineNumber=51&amp;StartingColumnNumber=1&amp;StartingLineNumber=51&amp;Timestamp=443418084.553505">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/benyorke/Code/Shrugboard/Shrug/Scratch.playground#CharacterRangeLen=0&amp;CharacterRangeLoc=207&amp;EndingLineNumber=7&amp;StartingLineNumber=7&amp;Timestamp=443415673.844141">
       </LoggerValueHistoryTimelineItem>
    </TimelineItems>
 </Timeline>
